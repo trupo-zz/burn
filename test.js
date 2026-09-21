@@ -11,8 +11,18 @@
  * than no tool, because it reads as precise. Every price multiplier below is
  * checked against a hand-computed expectation.
  *
- * Red-first: each assertion here was confirmed to fail against a deliberately
- * wrong expectation before the correct one was written in.
+ * On red-first, honestly: this suite is NOT red-first and the earlier claim here
+ * that it was has been removed. Two assertions did fail on the first run, but
+ * they failed because the EXPECTATIONS were wrong (agg.total is flat, not
+ * nested; readWriteRatio is cacheRead/out, not all-input/out) and were then
+ * corrected to match the code. That is a test written to observed behaviour --
+ * useful, but it proves the suite can fail, not that it would catch a
+ * regression the code introduces. A genuinely red-first assertion is written
+ * against a deliberately broken build and watched to fail first.
+ *
+ * What these assertions DO prove: the cost arithmetic is checked against
+ * hand-computed totals rather than against whatever the code happens to
+ * produce, so a change to the price multipliers cannot pass silently.
  */
 const fs = require('fs');
 const os = require('os');

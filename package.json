@@ -37,10 +37,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/strupo/burn.git"
+    "url": "git+https://github.com/trupo-zz/burn.git"
   },
   "bugs": {
-    "url": "https://github.com/strupo/burn/issues"
+    "url": "https://github.com/trupo-zz/burn/issues"
   },
-  "homepage": "https://github.com/strupo/burn#readme"
+  "homepage": "https://github.com/trupo-zz/burn#readme"
 }
