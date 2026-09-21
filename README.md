@@ -6,10 +6,11 @@ Your invoice tells you the total. It doesn't tell you that most of it can be
 context you already paid to send, re-read again on the next turn.
 
 ```
-npx burn-cc
+git clone https://github.com/trupo-zz/burn && node burn/cli.js
 ```
 
-That's it. No install, no account, no config, no network.
+That's it. No install, no account, no config, no network, nothing to add to
+your project.
 
 ```
   burn — where your Claude Code money goes
@@ -39,19 +40,13 @@ transcript on your disk, which is the same number the API reported and billed.
 ## Usage
 
 ```
-npx burn-cc                  # the report
-npx burn-cc --json           # machine-readable, for your own dashboards
-npx burn-cc --top 20         # more of your expensive sessions
-npx burn-cc --root <dir>     # a different transcript root
+node cli.js                  # the report
+node cli.js --json           # machine-readable, for your own dashboards
+node cli.js --top 20         # more of your expensive sessions
+node cli.js --root <dir>     # a different transcript root
 ```
 
-Or install it:
-
-```
-npm i -g burn-cc && burn
-```
-
-Node 18+. Zero dependencies.
+Node 18+. Zero dependencies — nothing to install, `git clone` is the install.
 
 ## What it measures
 
