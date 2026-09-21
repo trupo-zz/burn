@@ -1,0 +1,46 @@
+{
+  "name": "burn-cc",
+  "version": "0.1.0",
+  "description": "Where your Claude Code money actually goes — spend, context re-read waste, and your most expensive sessions. Runs entirely on your machine.",
+  "bin": {
+    "burn": "cli.js"
+  },
+  "main": "scan.js",
+  "type": "commonjs",
+  "files": [
+    "cli.js",
+    "scan.js",
+    "prices.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js",
+    "start": "node cli.js"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "anthropic",
+    "llm",
+    "cost",
+    "spend",
+    "tokens",
+    "cli",
+    "analytics",
+    "prompt-caching"
+  ],
+  "author": "Sean Trupo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strupo/burn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/strupo/burn/issues"
+  },
+  "homepage": "https://github.com/strupo/burn#readme"
+}
