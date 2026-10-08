@@ -47,10 +47,10 @@ const ROOT = arg('--root', null);
   console.log('');
   console.log('  burn — where your Claude Code money goes');
   console.log('  ' + '-'.repeat(52));
-  console.log(`  total spend            ${money(t.cost)}`);
+  console.log(`  API-equivalent cost    ${money(t.cost)}`);
   console.log(`  model turns            ${fmt(t.turns)}`);
   console.log(`  output tokens          ${short(t.out)}   (the work you got)`);
-  console.log(`  context re-read        ${short(t.cacheRead)}   (cached input, billed at 10%)`);
+  console.log(`  context re-read        ${short(t.cacheRead)}   (cached input, 2.5-10% of input price)`);
   console.log(`  read : write ratio     ${d.readWriteRatio == null ? '-' : fmt(Math.round(d.readWriteRatio)) + 'x'}`);
   console.log(`  cost per 1k output     ${money(d.costPerKOut)}`);
   console.log(`  spent re-reading       ${money(d.cacheReadCost)}`
@@ -73,8 +73,8 @@ const ROOT = arg('--root', null);
   }
 
   console.log(`\n  ${fmt(r.stats.files)} transcripts in ${((Date.now() - started) / 1000).toFixed(1)}s · ${r.root}`);
-  console.log(`  Numbers come from the usage block the API reported, not an estimate.`);
-  console.log(`  Fast-mode turns are under-counted: transcripts don't record the speed parameter.\n`);
+  console.log(`  Costs = recorded token counts x bundled price table (API rates, prices.json ${S.PRICES.verified}).`);
+  console.log(`  Fast-mode turns are priced at the standard rate, so they are under-counted.\n`);
 })().catch((e) => {
   console.error('burn: ' + (e && e.message ? e.message : String(e)));
   process.exit(1);

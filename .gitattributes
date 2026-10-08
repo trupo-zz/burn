@@ -1,0 +1,2 @@
+# Keep LF everywhere: a CRLF checkout would break the cli.js shebang (env would look for "node" + CR) and npx on macOS/Linux.
+* text=auto eol=lf

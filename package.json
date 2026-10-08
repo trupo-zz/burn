@@ -10,6 +10,7 @@
   "files": [
     "cli.js",
     "scan.js",
+    "verify.js",
     "prices.json",
     "README.md",
     "LICENSE"
